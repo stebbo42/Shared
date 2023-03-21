@@ -1,0 +1,57 @@
+[
+    {
+        "id": "9c6829f42aa56e4c",
+        "type": "tab",
+        "label": "Bindicator Colour Test",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9d78190f090271a5",
+        "type": "http in",
+        "z": "9c6829f42aa56e4c",
+        "name": "",
+        "url": "/bindicatorcolourtest",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "ba91ab5dd434ca4e"
+            ]
+        ]
+    },
+    {
+        "id": "d29618d48b90635d",
+        "type": "http response",
+        "z": "9c6829f42aa56e4c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ba91ab5dd434ca4e",
+        "type": "function",
+        "z": "9c6829f42aa56e4c",
+        "name": "Bin Colour",
+        "func": "msg.payload = \"#FEDB00\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 80,
+        "wires": [
+            [
+                "d29618d48b90635d"
+            ]
+        ]
+    }
+]
